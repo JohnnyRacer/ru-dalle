@@ -22,7 +22,7 @@ def generate_images(text, tokenizer, dalle, vae, top_k, top_p, images_num, image
     # TODO docstring
     if seed is not None:
         utils.seed_everything(seed)
-
+    has_cache = True
     vocab_size = dalle.get_param('vocab_size')
     text_seq_length = dalle.get_param('text_seq_length')
     image_seq_length = dalle.get_param('image_seq_length')
